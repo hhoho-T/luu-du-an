@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Helvetica Neue";
+  }
+  
+  body > div {
+    margin: auto;
+  }
+
+/* block */
+.btn {
+    display: inline-block;
+    /* bỏ dấu gạch chân của the a đi */
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    min-width: 120px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+/* dùng để cái nào có class liền kề nó sẽ tự động thêm thuộc tính bên dươi */
+.btn + .btn {
+    margin-left: 16px;
+}
+
+.btn--success {
+    background-color: #71be34;
+}
+
+.btn--wram {
+    background-color: #ffb702;
+}
+
+.btn--danger {
+    background-color: #ff623d;
+}
+/* thẻ này dùng để khóa nút lại ko cho ng dùng bấm vào */
+.btn--disabled {
+    /* làm cho nó mờ hẳn để nhận biết ko nhấn đc vào đó */
+    opacity: 0.4 !important;
+    /* tắt hiệu ứng chuột khi di vào */
+    cursor: default;
+}
+
+.btn--size-l {
+    padding: 20px 55px;
+    
+}
+
+.btn--size-m {
+    padding: 12px 48px;
+
+}
+
+.btn--size-s {
+    padding: 6px 40px;
+
+}

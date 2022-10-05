@@ -1,0 +1,39 @@
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+.header-icon {
+    font-size: 3rem;
+    color: red;
+    padding: 50px;
+}
+
+.header-check {
+    display: block;
+}
+
+.header__search-shop {
+    display: none;
+}
+.header-search-check:checked ~ .header__search-shop {
+
+    display: block;
+}
+
+
+.header-list{
+    list-style: none;
+    height: 98px;
+    width: 25%;
+}
+
+.header-item {
+    font-size: 2rem;
+
+}

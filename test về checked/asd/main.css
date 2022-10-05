@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header__list {
+    font-size: 40px;
+    padding: 50px;
+}
+.header__link {
+    font-size: 40px;
+    font-weight: 400;
+    color: #777;
+    background-color: rgb(88, 18, 18);
+    width: 200px;
+    height: 200px;
+}
+.header {
+    display: none;
+}
+.header__search-checkbox:checked ~ .header {
+    display: block;
+}
+
+.header__mobile-search-icon {
+    font-size: 2.6rem;
+    color: red;
+}

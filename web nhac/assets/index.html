@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/title1.png">
+    <title>Music player tổng hợp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="player">
+                <div class="player_header">
+                    <span class="material-icons-outlined">expand_more</span>
+                    <h3>Now Playing</h3>
+                    <span id="music_list" class="material-icons-outlined">queue_music</span>
+                </div>
+
+                <div class="player_img">
+                    <img src="./assets/img/duongtoitroemve.jpg" alt="">
+                </div>
+
+                <div class="player_songif">
+                    <!-- <span class="songif_favorite material-icons-outlined">favorite_border</span> -->
+                    <div class="songif_info">
+                        <p class="song_name">Đường Tôi Trở em Về</p>
+                        <p class="song_author">Lofi ver</p>
+                    </div>
+                    <!-- <span class="songif_more material-icons-outlined">more_horiz</span> -->
+                </div>
+
+                <div class="progress_area">
+                    <div class="progress-bar" style="width: 92.3533%;"></div>
+                </div>
+
+                <div class="timer">
+                    <span class="current">4:17</span>
+                    <span class="duration">4:38</span>
+                </div>
+
+                <audio id="audio" src="./assets/music/duongtoitroemve.mp3"></audio>
+
+                <div class="player_controls">
+                    <span id="repeat-loop" class="material-icons-outlined">repeat</span>
+                    <span id="prev" class="material-icons">skip_previous</span>
+                    <div class="play_pause">
+                        <span class="material-icons">pause</span>
+                    </div>
+                    <span id="next" class="material-icons">skip_next</span>
+                    <span class="material-icons">headphones</span>
+                </div>
+
+            </div>
+            <div class="playlist">
+                <div class="playlist_currsong">
+                    <div class="playlist_header">
+                        <span class="material-icons-outlined">search</span>
+                        <span id="close" class="material-icons-outlined">close</span>
+                    </div>
+                    <div class="currsongif">
+                        <div class="currsongif-img">
+                            <img src="./assets/img/duongtoitroemve.jpg" alt="">
+                        </div>
+                        <div class="currsongif-info">
+                            <div class="currsongif-info-container">
+                                <p class="currsongif-album">Album 11 song 2022</p>
+                                <p class="currsongif-name">Đường Tôi Trở em Về</p>
+                                <p class="currsongif-author">Lofi ver</p>
+                            </div>
+                            <div class="currsongif-info-icon">
+                                <span class="material-icons">music_video</span>
+                                <span class="material-icons-outlined">file_download</span>
+                                <span class="material-icons-outlined">pending</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="currsongif-info-btn">
+                        <span class="currsongif-info-prev-btn material-icons-round">skip_previous </span>
+                        <span class="currsongif-info-playpause-btn material-icons-round">pause_circle</span>
+                        <span class="currsongif-info-next-btn material-icons-round">skip_next</span>
+
+
+                    </div>
+                </div>
+                <div class="main_playlist">
+                    <div class="main_playlist-item " data-index="0">
+                        <span class="playlist-item-index">1</span>
+                        <div class="playlist-itemif">
+                            <p class="playlist-item-name">Chắc Ai Đó Sẽ Về</p>
+                            <p class="playlist-item-author">MTP</p>
+                        </div>
+                        <span id="option" class="waves_container ">
+                    <span class="music_waves wave1"></span>
+                        <span class="music_waves wave2"></span>
+                        <span class="music_waves wave3"></span>
+                        <span class="music_waves wave4"></span>
+                        </span>
+                    </div>
+
+
+                    <div class="main_playlist-item " data-index="1">
+                        <span class="playlist-item-index">2</span>
+                        <div class="playlist-itemif">
+                            <p class="playlist-item-name">Em Của Ngày Hôm Qua</p>
+                            <p class="playlist-item-author">MTP</p>
+                        </div>
+                        <span id="option" class="waves_container ">
+                    <span class="music_waves wave1"></span>
+                        <span class="music_waves wave2"></span>
+                        <span class="music_waves wave3"></span>
+                        <span class="music_waves wave4"></span>
+                        </span>
+                    </div>
+
+
+                    <div class="main_playlist-item " data-index="2">
+                        <span class="playlist-item-index">3</span>
+                        <div class="playlist-itemif">
+                            <p class="playlist-item-name">Em Của Quá Khứ</p>
+                            <p class="playlist-item-author">Nguyen Dinh Vu</p>
+                        </div>
+                        <span id="option" class="waves_container ">
+                    <span class="music_waves wave1"></span>
+                        <span class="music_waves wave2"></span>
+                        <span class="music_waves wave3"></span>
+                        <span class="music_waves wave4"></span>
+                        </span>
+                    </div>
+
+
+                    <div class="main_playlist-item active" data-index="3">
+                        <span class="playlist-item-index">4</span>
+                        <div class="playlist-itemif">
+                            <p class="playlist-item-name">Đường Tôi Trở em Về</p>
+                            <p class="playlist-item-author">Lofi ver</p>
+                        </div>
+                        <span id="option" class="waves_container show_wave">
+                    <span class="music_waves wave1"></span>
+                        <span class="music_waves wave2"></span>
+                        <span class="music_waves wave3"></span>
+                        <span class="music_waves wave4"></span>
+                        </span>
+                    </div>
+
+
+                    <div class="main_playlist-item " data-index="4">
+                        <span class="playlist-item-index">5</span>
+                        <div class="playlist-itemif">
+                            <p class="playlist-item-name">Chuyện Hoa Sim</p>
+                            <p class="playlist-item-author">H2K</p>
+                        </div>
+                        <span id="option" class="waves_container ">
+                    <span class="music_waves wave1"></span>
+                        <span class="music_waves wave2"></span>
+                        <span class="music_waves wave3"></span>
+                        <span class="music_waves wave4"></span>
+                        </span>
+                    </div>
+
+
+                    <div class="main_playlist-item " data-index="5">
+                        <span class="playlist-item-index">6</span>
+                        <div class="playlist-itemif">
+                            <p class="playlist-item-name">Hỏi Vợ Ngoại Thành</p>
+                            <p class="playlist-item-author">Xom cua Bao</p>
+                        </div>
+                        <span id="option" class="waves_container ">
+                    <span class="music_waves wave1"></span>
+                        <span class="music_waves wave2"></span>
+                        <span class="music_waves wave3"></span>
+                        <span class="music_waves wave4"></span>
+                        </span>
+                    </div>
+
+
+                    <div class="main_playlist-item " data-index="6">
+                        <span class="playlist-item-index">7</span>
+                        <div class="playlist-itemif">
+                            <p class="playlist-item-name">Duyên Duyên Số Số</p>
+                            <p class="playlist-item-author">Du Uyen x Nguyen Thuong</p>
+                        </div>
+                        <span id="option" class="waves_container ">
+                    <span class="music_waves wave1"></span>
+                        <span class="music_waves wave2"></span>
+                        <span class="music_waves wave3"></span>
+                        <span class="music_waves wave4"></span>
+                        </span>
+                    </div>
+
+
+                    <div class="main_playlist-item " data-index="7">
+                        <span class="playlist-item-index">8</span>
+                        <div class="playlist-itemif">
+                            <p class="playlist-item-name">Kiss</p>
+                            <p class="playlist-item-author">Hung Kubo Remix</p>
+                        </div>
+                        <span id="option" class="waves_container ">
+                    <span class="music_waves wave1"></span>
+                        <span class="music_waves wave2"></span>
+                        <span class="music_waves wave3"></span>
+                        <span class="music_waves wave4"></span>
+                        </span>
+                    </div>
+
+
+                    <div class="main_playlist-item " data-index="8">
+                        <span class="playlist-item-index">9</span>
+                        <div class="playlist-itemif">
+                            <p class="playlist-item-name">Mấy Đêm Chờ Mấy Đêm</p>
+                            <p class="playlist-item-author">Nguyen Huu Kha x Dai Meo Remix</p>
+                        </div>
+                        <span id="option" class="waves_container ">
+                    <span class="music_waves wave1"></span>
+                        <span class="music_waves wave2"></span>
+                        <span class="music_waves wave3"></span>
+                        <span class="music_waves wave4"></span>
+                        </span>
+                    </div>
+
+
+                    <div class="main_playlist-item " data-index="9">
+                        <span class="playlist-item-index">10</span>
+                        <div class="playlist-itemif">
+                            <p class="playlist-item-name">Kẻ Điên Tin Vào Tình Yêu</p>
+                            <p class="playlist-item-author">Lil Zpoet, Fread D</p>
+                        </div>
+                        <span id="option" class="waves_container ">
+                    <span class="music_waves wave1"></span>
+                        <span class="music_waves wave2"></span>
+                        <span class="music_waves wave3"></span>
+                        <span class="music_waves wave4"></span>
+                        </span>
+                    </div>
+
+
+                    <div class="main_playlist-item " data-index="10">
+                        <span class="playlist-item-index">11</span>
+                        <div class="playlist-itemif">
+                            <p class="playlist-item-name">Chẳng Thể Tìm Được Em</p>
+                            <p class="playlist-item-author">PhucXp ft. Freak D</p>
+                        </div>
+                        <span id="option" class="waves_container ">
+                    <span class="music_waves wave1"></span>
+                        <span class="music_waves wave2"></span>
+                        <span class="music_waves wave3"></span>
+                        <span class="music_waves wave4"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+
+
+</body>
+
+</html>

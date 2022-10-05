@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1080.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+
+    <div class="player">
+        <!-- Dashboard -->
+        <div class="dashboard">
+            <!-- Header -->
+            <header>
+                <h4>Now playing</h4>
+                <h2 style="opacity: 0.5; font-size: 15px;">Cool for the summer</h2>
+            </header>
+
+            <!-- CD -->
+            <div class="cd" style="width: 70px; opacity: 0;">
+                <div class="cd-thumb" style="background-image: url(&quot;./assets/img/song1.png&quot;);">
+                </div>
+            </div>
+
+            <!-- Control -->
+            <div class="control" style="opacity: 0.5;">
+                <div class="btn btn-repeat">
+                    <i class="fas fa-redo"></i>
+                </div>
+                <div class="btn btn-prev">
+                    <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="btn btn-toggle-play" style="background-color: transparent;">
+                    <i class="fas fa-pause icon-pause"></i>
+                    <i class="fas fa-play icon-play"></i>
+                </div>
+                <div class="btn btn-next">
+                    <i class="fas fa-step-forward"></i>
+                </div>
+                <div class="btn btn-random">
+                    <i class="fas fa-random"></i>
+                </div>
+            </div>
+
+            <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+
+
+            <audio id="audio" src="./assets/music/Cool For The Summer.mp3"></audio>
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist" style="background: linear-gradient(to right, rgb(29, 161, 8), rgb(182, 69, 213));">
+            <div class="song active" data-index="0">
+                <div class="thumb" style="background-image: url('./assets/img/song1.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Cool for the summer</h3>
+                    <p class="author">Demi Lovato</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="1">
+                <div class="thumb" style="background-image: url('./assets/img/song2.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Tay trái chỉ trăng</h3>
+                    <p class="author">Tát đỉnh đỉnh</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="2">
+                <div class="thumb" style="background-image: url('./assets/img/song3.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Bailando</h3>
+                    <p class="author">Enrique Iglesias</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="3">
+                <div class="thumb" style="background-image: url('./assets/img/song4.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Despacito</h3>
+                    <p class="author">Luis Fonsi</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="4">
+                <div class="thumb" style="background-image: url('./assets/img/song5.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Fly Away</h3>
+                    <p class="author">The Fat Rat</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="5">
+                <div class="thumb" style="background-image: url('./assets/img/song6.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">I Want You To Know</h3>
+                    <p class="author">Selena Gomez</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="6">
+                <div class="thumb" style="background-image: url('./assets/img/song7.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Pink Venom</h3>
+                    <p class="author">Black Pink</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="7">
+                <div class="thumb" style="background-image: url('./assets/img/song8.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Nevada</h3>
+                    <p class="author">The Fat Rat</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="8">
+                <div class="thumb" style="background-image: url('./assets/img/song9.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Oblivion</h3>
+                    <p class="author">Alan Waker</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="9">
+                <div class="thumb" style="background-image: url('./assets/img/song10.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Tái tạo màng trinh</h3>
+                    <p class="author">Phạm Thoại</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="10">
+                <div class="thumb" style="background-image: url('./assets/img/song11.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Chandelier</h3>
+                    <p class="author">Sia</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="11">
+                <div class="thumb" style="background-image: url('./assets/img/song12.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Easy on me</h3>
+                    <p class="author">Adele</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="12">
+                <div class="thumb" style="background-image: url('./assets/img/song13.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Em Da Xa Anh</h3>
+                    <p class="author">Bibo</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="13">
+                <div class="thumb" style="background-image: url('./assets/img/song14.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Ha Con Vuong Nang Remix</h3>
+                    <p class="author">DatKaa</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="14">
+                <div class="thumb" style="background-image: url('./assets/img/song15.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Happier</h3>
+                    <p class="author">Marshello</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="15">
+                <div class="thumb" style="background-image: url('./assets/img/song16.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Havana</h3>
+                    <p class="author">Camila Cabello</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="16">
+                <div class="thumb" style="background-image: url('./assets/img/song17.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Hero</h3>
+                    <p class="author">Christina</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="17">
+                <div class="thumb" style="background-image: url('./assets/img/song18.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Industry Baby</h3>
+                    <p class="author">Lil Nas X</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="18">
+                <div class="thumb" style="background-image: url('./assets/img/song19.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Lovely</h3>
+                    <p class="author">Billie Eilish</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="19">
+                <div class="thumb" style="background-image: url('./assets/img/song20.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">MoveYourBody</h3>
+                    <p class="author">Sia feats Alan Walker</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="20">
+                <div class="thumb" style="background-image: url('./assets/img/song21.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Ngày Đầu Tiên</h3>
+                    <p class="author">Đức Phúc</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="21">
+                <div class="thumb" style="background-image: url('./assets/img/song22.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">NgayThoPhong</h3>
+                    <p class="author">Tăng Duy Tân</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="22">
+                <div class="thumb" style="background-image: url('./assets/img/song23.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">On The Ground</h3>
+                    <p class="author">Rose</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="23">
+                <div class="thumb" style="background-image: url('./assets/img/song24.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Play Date</h3>
+                    <p class="author">Melanie Martinez</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="24">
+                <div class="thumb" style="background-image: url('./assets/img/song25.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Positions</h3>
+                    <p class="author">Ariana Grande</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="25">
+                <div class="thumb" style="background-image: url('./assets/img/song26.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Rather Be</h3>
+                    <p class="author">Jess Glynne</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="26">
+                <div class="thumb" style="background-image: url('./assets/img/song27.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Set Fire To The Rain</h3>
+                    <p class="author">Adele</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="27">
+                <div class="thumb" style="background-image: url('./assets/img/song28.png')">
+                </div>
+                <div class="body">
+                    <h3 class="title">That's What I Want</h3>
+                    <p class="author">Lil Nas X</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="28">
+                <div class="thumb" style="background-image: url('./assets/img/song29.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Stay</h3>
+                    <p class="author">Justin Bieber</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="song " data-index="29">
+                <div class="thumb" style="background-image: url('./assets/img/song30.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Huynh De Oi</h3>
+                    <p class="author">Htrol</p>
+                </div>
+                <div class="option">
+                    <i class="option__icon far fa-heart"></i>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" style="height: 270px; background: url(&quot;./assets/dashboardImg/photo7.gif&quot;) 0% 0% / cover;">
+        </div>
+
+
+
+        <!-- Design from: https://static.collectui.com/shots/3671744/musicloud-revolutionary-app-for-music-streaming-large -->
+        <!-- 1 Render songs 
+        2 Scroll top 
+        3 Play/pause/seek 
+        4 CD rotates 
+        5 Next / prev 
+        6 Random 
+        7 Next/ Repeat when ended 
+        8 Active song 
+        9 Scroll active song into view
+        10 Play song when click -->
+        <script src="main.js"></script>
+
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <form action="" method="post" id="form1" class="form">
+            <h3 class="head">Thành viên đăng kí</h3>
+            <p class="desc">Cùng nhau học lập trình phát triển website ❤️</p>
+            <div class="spacer"></div>
+
+            <div class="form-all">
+                <label for="fullname" class="form-label">Tên đầy đủ</label>
+                <input type="text" name="fullname" id="fullname" placeholder="VD: Nguyễn Bá Trí" class="fr-control">
+                <span class="form-messger"></span>
+            </div>
+            <div class="form-all">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" name="email" id="email" placeholder="VD: nguyentri@douyin.com" class="fr-control">
+                <span class="form-messger"></span>
+            </div>
+            <div class="form-all">
+                <label for="password" class="form-label">Nhập mật khẩu</label>
+                <input type="password" name="password" id="password" placeholder="Nhập mật khẩu" class="fr-control">
+                <span class="form-messger"></span>
+            </div>
+            <div class="form-all">
+                <label for="password-for" class="form-label">Nhập lại mật khẩu</label>
+                <!-- disabled là không tương tác được  -->
+                <input type="password" name="password-for" id="password-for" placeholder="Nhập lại mật khẩu" class="fr-control">
+                <span class="form-messger"></span>
+            </div>
+            <div class="form-all">
+                <label for="avatar" class="form-label">Ảnh Đại Diện</label>
+                <input type="file" name="avatar" id="avatar" class="fr-control">
+                <span class="form-messger"></span>
+            </div>
+            <div class="form-all">
+                <label for="province" class="form-label">Tỉnh/TP</label>
+                <select id="province" name="province" class="fr-control">
+                    <option value="">--Chọn Tỉnh/TP--</option>
+                    <option value="hni">Hà Nội</option>
+                    <option value="hcm">Thành Phố Hồ Chí Minh</option>
+                </select>
+                <span class="form-messger"></span>
+            </div>
+            <div class="form-all reset">
+                <label for="password-for" class="form-label">Giới tính</label>
+                <div>
+                    <input name="gender" type="radio" value="male" class="fr-control"> Nam
+                </div>
+                <div>
+                    <input name="gender" type="radio" value="female" class="fr-control"> Nữ
+                </div>
+                <div>
+                    <input name="gender" type="radio" value="orther" class="fr-control"> Khác
+                </div>
+                <span class="form-messger"></span>
+            </div>
+            <button class="submit">Đăng kí</button>
+        </form>
+        <form action="" method="post" id="form2" class="form">
+            <h3 class="head">Đăng Nhập</h3>
+            <p class="desc">Cùng nhau học lập trình phát triển website ❤️</p>
+            <div class="spacer"></div>
+
+
+            <div class="form-all">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" name="email" id="email" placeholder="VD: nguyentri@douyin.com" class="fr-control">
+                <span class="form-messger"></span>
+            </div>
+            <div class="form-all">
+                <label for="password" class="form-label">Nhập mật khẩu</label>
+                <input type="password" name="password" id="password" placeholder="Nhập mật khẩu" class="fr-control">
+                <span class="form-messger"></span>
+            </div>
+
+            <button class="submit">Đăng kí</button>
+        </form>
+    </div>
+    <script src="main.js"></script>
+    <script>
+        Vatirico({
+            // nếu ta làm theo cách này thì ta nhập gì vào isRequired hoặc isEmail thì đều in ra đc 
+            form: '#form1',
+            // truyền vào form all để có thể sử dụng lại 
+            formGroupSelect: '.form-all',
+            errorSelect: '.form-messger',
+            rules: [
+                Vatirico.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
+                //gán thêm isRequired để gán khi không nhập sẽ in ra vui lòng nhập đúng trường này
+                Vatirico.isRequired('#email'),
+                Vatirico.isEmail('#email'),
+                Vatirico.minLe('#password', 6),
+                Vatirico.isRequired('#password-for'),
+                Vatirico.isRequired('#province'),
+                Vatirico.isRequired('#avatar'),
+                Vatirico.isRequired('input[name="gender"]'),
+                // trường hợp này không cần thiết 
+                // Vatirico.isRequired('#password-for'),
+                Vatirico.same('#password-for', function() {
+                    return document.querySelector('#form1 #password').value;
+                }, 'mật khẩu nhập lại không chính xác'),
+
+            ],
+            // TAO thêm hàm để khi bấm đăng kí sẽ in ra tất cả các dữ liệu 
+            // và khi có onSubmit sẽ loại bỏ hành vi mặc định
+            onSubmit: function(data) {
+                console.log(data);
+            }
+        });
+        Vatirico({
+            form: '#form2',
+            formGroupSelect: '.form-all',
+            errorSelect: '.form-messger',
+            rules: [
+                Vatirico.isEmail('#email'),
+                Vatirico.minLe('#password', 6),
+
+            ],
+            onSubmit: function(data) {
+                console.log(data);
+            }
+        });
+    </script>
+</body>
+
+</html>

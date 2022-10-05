@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="app">
+        <form action="" method="post" class="form" id="form-2">
+            <h3 class="heading">Thành viên đăng kí</h3>
+            <p class="desc">Học lập trình để xây dựng web, phát triển phần mềm ❤️</p>
+            <div class="spacer"></div>
+            <div class="form-group">
+                <label class="form-label" for="fullname">Họ và tên</label>
+                <input type="text" id="fullname" rules="required" name="fullname" class="form-control" placeholder="Vd: Nguyễn Bá Trí">
+                <div class="form-mes"></div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="text" id="email" rules="required|email" name="email" class="form-control" placeholder="Vd: batri@douyn.com">
+                <div class="form-mes"></div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="password">Mật Khẩu</label>
+                <input type="password" id="password" rules="required|min:6" name="password" class="form-control" placeholder="Nhập mật khẩu">
+                <div class="form-mes"></div>
+            </div>
+            <button class="submit">Đăng kí</button>
+        </form>
+    </div>
+    <!-- thư viện validator  -->
+    <script src="validator.js"></script>
+    <script>
+        // làm cho sau này sử dụng API
+        var form = new Validator('#form-2');
+        form.onSubmit = function(formData) {
+            console.log(formData)
+        }
+    </script>
+</body>
+
+</html>
